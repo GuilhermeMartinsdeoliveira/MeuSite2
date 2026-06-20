@@ -1,18 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}"/>
+
 </head>
 <body>  
-    <h1>Meu primeiro site Django</h1>
-<h2>Seja bem vindo {{ nome }} {{ sobrenome }}</h2>
-    <h3>Menu</h3>
-    <ul>
-        <li><a>Home</a></li>
-        <li><a >Produtos</a></li>
-        <li><a >contato</a></li>
+    <div class="container">
+        <h1>Meu primeiro site Django</h1>
+        <img src="{% static 'img/carro.jpg' %}" width="300" height="200"/>
+        <h2>Seja bem vindo {{ nome }} {{ sobrenome }}</h2>
+        <h3>Menu</h3>
+        <ul>
+            <li><a>Home</a></li>
+            <li><a href="/produto/">Produtos</a></li>
+            <li><a href="/contato/">contato</a></li>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
 
